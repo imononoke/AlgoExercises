@@ -2,7 +2,9 @@ package lc
 
 import java.util.HashMap
 
-// https://leetcode-cn.com/problems/two-sum/
+/**
+ * https://leetcode-cn.com/problems/two-sum/
+ */
 object _1_TwoSum {
     fun twoSum(nums: IntArray?, target: Int): IntArray? {
         if (null == nums) {
