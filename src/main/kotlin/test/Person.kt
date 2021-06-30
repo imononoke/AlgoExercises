@@ -1,9 +1,17 @@
-package testKt
+package test
 
 open class Person constructor(name: String) {
     open lateinit var userName: String
-    private var age: Int = 0
-    private var addr: String
+    open var age: Int = 0
+    get() = 22
+    private var addr: String = ""
+        get() {
+            println("get addr")
+            return field
+        }
+        set(value) {
+            field = value
+        }
 
     init {
         println("init $name")
@@ -35,5 +43,8 @@ class Stu2(name: String) : Person(name) {
 
 fun main() {
     var p1 = Person("i")
+    p1.userName = "aa"
+
     var p2 = Person("h2", 22)
+    p2.age = 33
 }
